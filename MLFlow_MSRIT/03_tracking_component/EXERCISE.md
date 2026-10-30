@@ -13,7 +13,7 @@ Complete the following independently after running the example once.
 - Screenshot or short evidence note
 
 ## Submission checklist
-- [ ] My code runs without an unhandled error.
-- [ ] I changed the code/configuration as requested.
-- [ ] I included the requested output evidence.
-- [ ] I can explain my changes in my own words.
+- [X] My code runs without an unhandled error.
+- [X] I changed the code/configuration as requested.
+- [X] I included the requested output evidence.
+- [X] I can explain my changes in my own words.
