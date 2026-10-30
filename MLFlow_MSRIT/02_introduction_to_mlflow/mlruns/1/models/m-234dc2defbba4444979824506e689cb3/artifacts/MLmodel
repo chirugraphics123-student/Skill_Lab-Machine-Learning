@@ -1,0 +1,23 @@
+artifact_path: file:///D:/MLFlow_skill_course/MLflow_Regression_Labs_and_Word_Manuals_Revised/MLflow_course/MLflow_PyCharm_Lab_Manual_Project/02_introduction_to_mlflow/mlruns/1/models/m-234dc2defbba4444979824506e689cb3/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.11.0
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types: null
+mlflow_version: 3.17.2
+model_id: m-234dc2defbba4444979824506e689cb3
+model_size_bytes: 6559
+model_uuid: m-234dc2defbba4444979824506e689cb3
+prompts: null
+run_id: 3cd87e11f75d4f428827714f646c13a7
+utc_time_created: '2026-10-29 13:47:58.184184'

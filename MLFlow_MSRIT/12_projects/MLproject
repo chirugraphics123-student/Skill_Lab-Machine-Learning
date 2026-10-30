@@ -1,0 +1,6 @@
+name: beginner-mlflow-regression-project
+entry_points:
+  main:
+    parameters:
+      alpha: {type: float, default: 1.0}
+    command: "python train.py --alpha {alpha}"
