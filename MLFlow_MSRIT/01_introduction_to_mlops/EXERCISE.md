@@ -12,7 +12,7 @@
 - A short explanation (3–5 sentences)
 
 ## Submission checklist
-- [ ] My code runs without an unhandled error.
-- [ ] I changed the code as requested.
-- [ ] I included output evidence.
-- [ ] I can explain my changes in my own words.
+- [X] My code runs without an unhandled error.
+- [X] I changed the code as requested.
+- [X] I included output evidence.
+- [X] I can explain my changes in my own words.
