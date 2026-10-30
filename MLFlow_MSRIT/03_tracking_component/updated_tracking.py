@@ -11,7 +11,7 @@ with mlflow.start_run(run_name="tracking-basics") as run:
     )
     mlflow.log_artifact("my_note.txt")
 
-    # Log second artifact
+
     Path("next_steps.txt").write_text(
         "Next steps: explore multi-run comparisons, learn about model registry, and try logging multiple metrics.\n",
         encoding="utf-8"
