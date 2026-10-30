@@ -6,7 +6,7 @@ from sklearn.metrics import mean_absolute_error, r2_score
 # Invented classroom data for learning only; not real student-performance research.
 DATA = pd.DataFrame({
     "hours_studied": [1, 2, 3, 4, 5],
-    "marks": [16,19,27,29,34],
+    "marks": [16, 19, 27, 29, 34],
 })
 
 X = DATA[["hours_studied"]]
@@ -35,6 +35,7 @@ new_predictions = model.predict(new_hours)
 # Display the results
 for hours, mark in zip([6, 7, 8], new_predictions):
     print(f"Hours: {hours} -> Predicted Mark: {round(float(mark), 1)}")
+
 '''• Why predicting marks is a regression task: Predicting student marks is a 
 regression task because the target output is a continuous numeric value that 
 can fall anywhere along an infinite numerical range, rather than a discrete 
