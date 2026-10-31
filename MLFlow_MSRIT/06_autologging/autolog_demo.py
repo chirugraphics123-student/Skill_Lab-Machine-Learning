@@ -11,6 +11,7 @@ DATA = pd.DataFrame({
 X = DATA[["hours_studied"]]
 y = DATA["marks"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=7)
+mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment("Beginner MLflow - Regression Autologging")
 mlflow.sklearn.autolog()
 
