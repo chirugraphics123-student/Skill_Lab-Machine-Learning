@@ -1,8 +1,10 @@
 import pandas as pd
 import mlflow
+from mlflow import set_tracking_uri
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
+import numpy as np
 
 # Invented classroom data for learning only.
 DATA = pd.DataFrame({
@@ -11,11 +13,12 @@ DATA = pd.DataFrame({
 })
 X = DATA[["hours_studied"]]
 y = DATA["marks"]
+mlflow.set_tracking_uri("http://localhost:5000")
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=7)
 mlflow.set_experiment("Beginner MLflow - Compare Regression Runs")
 
 # Ridge is a linear regression model with a tunable regularization strength (alpha).
-for alpha in [0.1, 1.0, 10.0]:
+for alpha in np.arange(0,10,0.1):
     model = Ridge(alpha=alpha)
     with mlflow.start_run(run_name=f"ridge-alpha-{alpha}"):
         model.fit(X_train, y_train)
@@ -26,4 +29,5 @@ for alpha in [0.1, 1.0, 10.0]:
         mlflow.log_metric("mae", mae)
         mlflow.log_metric("r2", r2)
         print(f"alpha={alpha}, MAE={mae:.2f}, R-squared={r2:.2f}")
+
 print("Open the MLflow UI to compare the three runs. Lower MAE is better.")
